@@ -15,3 +15,19 @@ zstyle ':vcs_info:git:*' formats '%b'
 setopt PROMPT_SUBST
 
 PROMPT='[%n@%m %1~]%F{green}(${vcs_info_msg_0_})%F{white}$ '
+# Created by `pipx` on 2025-02-25 11:34:42
+export PATH="$PATH:/Users/user/.local/bin"
+
+# bun completions
+[ -s "/Users/user/.bun/_bun" ] && source "/Users/user/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+# Aliases
+alias gs='git status'
+alias ga='git add .'
+alias gc='git commit -m'
+alias gps='git push'
+alias gp='git pull'
