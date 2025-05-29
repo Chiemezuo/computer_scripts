@@ -31,3 +31,8 @@ alias ga='git add .'
 alias gc='git commit -m'
 alias gps='git push'
 alias gp='git pull'
+# The following lines have been added by Docker Desktop to enable Docker CLI completions.
+fpath=(/Users/user/.docker/completions $fpath)
+autoload -Uz compinit
+compinit
+# End of Docker CLI completions
