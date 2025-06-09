@@ -31,6 +31,12 @@ alias ga='git add .'
 alias gc='git commit -m'
 alias gps='git push'
 alias gp='git pull'
+alias ,,m='python manage.py migrate'
+alias ,,mm='python manage.py makemigrations'
+alias ,,r='python manage.py runserver'
+alias ,,c='python manage.py createsuperuser'
+alias ,,sh='python manage.py shell'
+
 # The following lines have been added by Docker Desktop to enable Docker CLI completions.
 fpath=(/Users/user/.docker/completions $fpath)
 autoload -Uz compinit
