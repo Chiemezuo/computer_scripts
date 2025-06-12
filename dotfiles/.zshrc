@@ -37,6 +37,23 @@ alias ,,r='python manage.py runserver'
 alias ,,c='python manage.py createsuperuser'
 alias ,,sh='python manage.py shell'
 
+# Function that acts like an alias for activating my python virtual environments
+venv () {
+  if [ -z "$1" ]; then
+    echo "Usage: venv <path-to-venv-bin-parent>"
+    echo "Example: venv ../.venv"
+    return 1
+  fi
+
+  if [ -f "$1/bin/activate" ]; then
+    source "$1/bin/activate"
+    echo "Activated virtual environment: $1"
+  else
+    echo "Error: $1/bin/activate not found"
+    return 1
+  fi
+}
+
 # The following lines have been added by Docker Desktop to enable Docker CLI completions.
 fpath=(/Users/user/.docker/completions $fpath)
 autoload -Uz compinit
